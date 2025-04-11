@@ -256,249 +256,92 @@
     </div>
 
     <div class="container mx-auto px-8 relative z-10">
+<!-- Skills Section -->
+<section id="skills" class="py-16 sm:py-24 bg-gradient-to-br from-gray-900 to-black overflow-hidden px-4 sm:px-8">
+    <!-- Reduced background elements for mobile -->
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+        <div class="absolute top-1/4 left-4 w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-red-500 opacity-10 blur-lg sm:blur-3xl animate-float"></div>
+        <div class="absolute bottom-1/3 right-4 w-28 h-28 sm:w-40 sm:h-40 rounded-full bg-blue-500 opacity-10 blur-lg sm:blur-3xl animate-float-delay"></div>
+    </div>
+
+    <div class="container mx-auto relative z-10">
         <!-- Section Header -->
-        <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-bold mb-4">
+        <div class="text-center mb-12 sm:mb-16">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-200">My Skills</span>
             </h2>
-            <div class="w-24 h-1 bg-gradient-to-r from-red-500 to-blue-500 mx-auto"></div>
+            <div class="w-20 h-1 bg-gradient-to-r from-red-500 to-blue-500 mx-auto"></div>
         </div>
 
-        <!-- Skills Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Skill Card 1 -->
+        <!-- Skills Grid (1 column on mobile) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            <!-- Skill Item 1 -->
             <div class="relative group">
-                <div class="absolute inset-0 rounded-xl bg-gradient-to-br from-red-500/20 to-blue-500/20 opacity-70 group-hover:opacity-100 transition-all duration-500 p-[2px]">
-                    <div class="h-full w-full bg-gray-900/80 backdrop-blur-sm rounded-xl p-6">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="text-3xl text-red-400">🔷</div>
-                            <h3 class="text-xl font-bold text-white">HTML/CSS</h3>
+                <div class="flex items-center gap-4 bg-gray-800/80 backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-gray-700 hover:border-red-500 transition-all">
+                    <div class="text-2xl sm:text-3xl text-red-400">🔷</div>
+                    <div class="flex-grow">
+                        <h3 class="text-lg sm:text-xl font-bold text-white mb-1">HTML/CSS</h3>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-gradient-to-r from-red-500 to-red-400 h-2 rounded-full" style="width: 70%"></div>
                         </div>
-                        <div class="mb-4">
-                            <div class="flex justify-between text-sm text-gray-300 mb-1">
-                                <span>Beginner</span>
-                                <span>40%</span>
-                            </div>
-                            <div class="w-full h-2 bg-gray-700 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-red-500 to-red-400 rounded-full" style="width: 40%"></div>
-                            </div>
-                        </div>
-                        <p class="text-gray-400">Building responsive web interfaces with modern standards.</p>
+                        <p class="text-xs sm:text-sm text-gray-400 mt-2">Building responsive web interfaces</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Skill Card 2 -->
+            <!-- Skill Item 2 -->
             <div class="relative group">
-                <div class="absolute inset-0 rounded-xl bg-gradient-to-br from-red-500/20 to-blue-500/20 opacity-70 group-hover:opacity-100 transition-all duration-500 p-[2px]">
-                    <div class="h-full w-full bg-gray-900/80 backdrop-blur-sm rounded-xl p-6">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="text-3xl text-blue-400">💻</div>
-                            <h3 class="text-xl font-bold text-white">Python</h3>
+                <div class="flex items-center gap-4 bg-gray-800/80 backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-all">
+                    <div class="text-2xl sm:text-3xl text-blue-400">💻</div>
+                    <div class="flex-grow">
+                        <h3 class="text-lg sm:text-xl font-bold text-white mb-1">Python</h3>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-gradient-to-r from-blue-500 to-blue-400 h-2 rounded-full" style="width: 80%"></div>
                         </div>
-                        <div class="mb-4">
-                            <div class="flex justify-between text-sm text-gray-300 mb-1">
-                                <span>Beginner</span>
-                                <span>50%</span>
-                            </div>
-                            <div class="w-full h-2 bg-gray-700 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-blue-500 to-blue-400 rounded-full" style="width: 50%"></div>
-                            </div>
-                        </div>
-                        <p class="text-gray-400">Scripting, automation, and security tool development.</p>
+                        <p class="text-xs sm:text-sm text-gray-400 mt-2">Security scripting & automation</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Skill Card 3 -->
+            <!-- Add 4 more skill items with same structure -->
+            <!-- Pentesting Skill -->
             <div class="relative group">
-                <div class="absolute inset-0 rounded-xl bg-gradient-to-br from-red-500/20 to-blue-500/20 opacity-70 group-hover:opacity-100 transition-all duration-500 p-[2px]">
-                    <div class="h-full w-full bg-gray-900/80 backdrop-blur-sm rounded-xl p-6">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="text-3xl text-purple-400">🛡️</div>
-                            <h3 class="text-xl font-bold text-white">Penetration Testing</h3>
+                <div class="flex items-center gap-4 bg-gray-800/80 backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-gray-700 hover:border-purple-500 transition-all">
+                    <div class="text-2xl sm:text-3xl text-purple-400">🛡️</div>
+                    <div class="flex-grow">
+                        <h3 class="text-lg sm:text-xl font-bold text-white mb-1">Penetration Testing</h3>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-gradient-to-r from-purple-500 to-purple-400 h-2 rounded-full" style="width: 85%"></div>
                         </div>
-                        <div class="mb-4">
-                            <div class="flex justify-between text-sm text-gray-300 mb-1">
-                                <span>Intermediate</span>
-                                <span>65%</span>
-                            </div>
-                            <div class="w-full h-2 bg-gray-700 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-purple-500 to-purple-400 rounded-full" style="width: 65%"></div>
-                            </div>
-                        </div>
-                        <p class="text-gray-400">Ethical hacking and vulnerability assessment.</p>
+                        <p class="text-xs sm:text-sm text-gray-400 mt-2">Ethical hacking techniques</p>
                     </div>
                 </div>
             </div>
-
-            <!-- Add more skill cards as needed -->
+            
+            <!-- Add more skills as needed -->
         </div>
     </div>
 </section>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
-        }
-        .animate-float-delay {
-            animation: float 6s ease-in-out infinite 2s;
-        }
-    </style>
-</head>
-<body class="bg-black text-white">
-    <!-- Projects Section -->
-    <section id="projects" class="relative py-24 bg-gradient-to-br from-black to-gray-900 min-h-screen overflow-hidden">
-        <!-- Animated background elements -->
-        <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
-            <div class="absolute top-20 right-10 w-32 h-32 rounded-full bg-red-500 opacity-10 blur-3xl animate-float"></div>
-            <div class="absolute bottom-1/4 left-20 w-40 h-40 rounded-full bg-blue-500 opacity-10 blur-3xl animate-float-delay"></div>
-        </div>
 
-        <div class="container mx-auto px-8 relative z-10">
-            <!-- Section Header -->
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-200">My Projects</span>
-                </h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-red-500 to-blue-500 mx-auto"></div>
-                <p class="mt-6 text-gray-400 max-w-2xl mx-auto">Security research and development projects that demonstrate my technical capabilities</p>
-            </div>
-
-            <!-- Projects Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 - Cybersecurity -->
-                <div class="group relative min-h-[550px]">
-                    <div class="absolute inset-0 rounded-xl bg-gradient-to-br from-red-500/20 to-blue-500/20 opacity-70 group-hover:opacity-100 transition-all duration-500 p-[2px] h-full">
-                        <div class="h-full bg-gray-900/80 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-800 flex flex-col">
-                            <div class="relative overflow-hidden h-48 flex-shrink-0">
-                                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGVuZXRyYXRpb24lMjB0ZXN0aW5nfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" 
-                                     alt="Penetration Testing"
-                                     class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                                <span class="absolute bottom-4 left-4 px-3 py-1 bg-red-500/90 text-xs font-bold rounded-full">SECURITY</span>
-                            </div>
-                            <div class="p-6 flex-grow">
-                                <h3 class="text-xl font-bold text-white mb-2">Vulnerability Scanner</h3>
-                                <p class="text-gray-400 text-sm mb-4">
-                                    Developed a Python-based automated scanner that detects XSS, SQL injection, and other OWASP Top 10 vulnerabilities. 
-                                    Features include comprehensive reporting, integration with Burp Suite API, and customizable scanning profiles.
-                                </p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="px-2 py-1 bg-gray-800 text-red-400 text-xs rounded">Python</span>
-                                    <span class="px-2 py-1 bg-gray-800 text-blue-400 text-xs rounded">OWASP ZAP</span>
-                                    <span class="px-2 py-1 bg-gray-800 text-purple-400 text-xs rounded">Automation</span>
-                                    <span class="px-2 py-1 bg-gray-800 text-green-400 text-xs rounded">REST API</span>
-                                </div>
-                            </div>
-                            <div class="px-6 pb-6 flex gap-3 mt-auto">
-                                <a href="#" class="flex-1 text-sm px-4 py-2 bg-gradient-to-r from-red-500 to-red-600 rounded-lg font-medium hover:shadow-lg hover:shadow-red-500/30 transition-all text-center">
-                                    Case Study
-                                </a>
-                                <a href="#" class="flex-1 text-sm px-4 py-2 border border-gray-700 text-gray-300 rounded-lg font-medium hover:bg-gray-800/50 transition-all text-center">
-                                    GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 - Web Development -->
-                <div class="group relative min-h-[550px]">
-                    <div class="absolute inset-0 rounded-xl bg-gradient-to-br from-red-500/20 to-blue-500/20 opacity-70 group-hover:opacity-100 transition-all duration-500 p-[2px] h-full">
-                        <div class="h-full bg-gray-900/80 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-800 flex flex-col">
-                            <div class="relative overflow-hidden h-48 flex-shrink-0">
-                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c2VjdXJlJTIwY29kZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" 
-                                     alt="Secure Coding"
-                                     class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                                <span class="absolute bottom-4 left-4 px-3 py-1 bg-blue-500/90 text-xs font-bold rounded-full">WEB DEV</span>
-                            </div>
-                            <div class="p-6 flex-grow">
-                                <h3 class="text-xl font-bold text-white mb-2">Secure Auth System</h3>
-                                <p class="text-gray-400 text-sm mb-4">
-                                    Implemented a JWT-based authentication microservice with rate limiting, brute-force protection, 
-                                    and multi-factor authentication options. Includes detailed audit logging and supports OAuth 2.0 integration.
-                                </p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="px-2 py-1 bg-gray-800 text-red-400 text-xs rounded">Node.js</span>
-                                    <span class="px-2 py-1 bg-gray-800 text-blue-400 text-xs rounded">JWT</span>
-                                    <span class="px-2 py-1 bg-gray-800 text-green-400 text-xs rounded">MongoDB</span>
-                                    <span class="px-2 py-1 bg-gray-800 text-yellow-400 text-xs rounded">Redis</span>
-                                </div>
-                            </div>
-                            <div class="px-6 pb-6 flex gap-3 mt-auto">
-                                <a href="#" class="flex-1 text-sm px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg font-medium hover:shadow-lg hover:shadow-blue-500/30 transition-all text-center">
-                                    Live Demo
-                                </a>
-                                <a href="#" class="flex-1 text-sm px-4 py-2 border border-gray-700 text-gray-300 rounded-lg font-medium hover:bg-gray-800/50 transition-all text-center">
-                                    Code
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 - Bug Bounty -->
-                <div class="group relative min-h-[550px]">
-                    <div class="absolute inset-0 rounded-xl bg-gradient-to-br from-red-500/20 to-blue-500/20 opacity-70 group-hover:opacity-100 transition-all duration-500 p-[2px] h-full">
-                        <div class="h-full bg-gray-900/80 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-800 flex flex-col">
-                            <div class="relative overflow-hidden h-48 flex-shrink-0">
-                                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJ1ZyUyMGJvdW50eXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" 
-                                     alt="Bug Bounty"
-                                     class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                                <span class="absolute bottom-4 left-4 px-3 py-1 bg-purple-500/90 text-xs font-bold rounded-full">RESEARCH</span>
-                            </div>
-                            <div class="p-6 flex-grow">
-                                <h3 class="text-xl font-bold text-white mb-2">API Security Research</h3>
-                                <p class="text-gray-400 text-sm mb-4">
-                                    Discovered and responsibly disclosed critical IDOR vulnerability in a FinTech API that allowed unauthorized 
-                                    access to sensitive financial data. Documented full exploit chain and recommended mitigation strategies.
-                                </p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="px-2 py-1 bg-gray-800 text-purple-400 text-xs rounded">Burp Suite</span>
-                                    <span class="px-2 py-1 bg-gray-800 text-yellow-400 text-xs rounded">OWASP Top 10</span>
-                                    <span class="px-2 py-1 bg-gray-800 text-red-400 text-xs rounded">CVE-2023-XXXXX</span>
-                                    <span class="px-2 py-1 bg-gray-800 text-blue-400 text-xs rounded">API Testing</span>
-                                </div>
-                            </div>
-                            <div class="px-6 pb-6 flex gap-3 mt-auto">
-                                <a href="#" class="flex-1 text-sm px-4 py-2 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg font-medium hover:shadow-lg hover:shadow-purple-500/30 transition-all text-center">
-                                    Report
-                                </a>
-                                <a href="#" class="flex-1 text-sm px-4 py-2 border border-gray-700 text-gray-300 rounded-lg font-medium hover:bg-gray-800/50 transition-all text-center">
-                                    Details
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- View More Button -->
-            <div class="text-center mt-16">
-                <a href="#" class="inline-flex items-center px-6 py-3 border border-gray-700 text-gray-300 rounded-lg font-medium hover:bg-gray-800/50 transition-all group">
-                    View All Projects
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </section>
-</body>
-</html>
+<!-- Animation Styles -->
+<style>
+    .animate-float { animation: float 6s ease-in-out infinite; }
+    .animate-float-delay { animation: float 6s ease-in-out infinite 2s; }
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+    
+    /* Text animation for hero section */
+    #animated-text {
+        display: inline-block;
+        animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+        0% { opacity: 0; transform: translateY(10px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+</style>
 
 <!-- Education Section -->
 <section id="education" class="relative py-24 bg-gradient-to-br from-gray-900 to-black overflow-hidden">
