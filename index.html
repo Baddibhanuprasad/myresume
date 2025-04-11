@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website</title>
+    <title>Bhanu Prasad - Cybersecurity Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* Animation styles */
         @keyframes fadeIn {
             0% { opacity: 0; transform: translateY(20px); }
             100% { opacity: 1; transform: translateY(0); }
@@ -14,30 +16,71 @@
             display: inline-block;
             animation: fadeIn 1s ease-in-out;
         }
-    </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const textArray = ["Web Designer", "Developer", "Freelancer"];
-            let index = 0;
-            const textElement = document.getElementById("animated-text");
-            
-            function changeText() {
-                textElement.classList.remove("animate-text");
-                void textElement.offsetWidth; 
-                textElement.textContent = textArray[index];
-                textElement.classList.add("animate-text");
-                index = (index + 1) % textArray.length;
+        .animate-float { 
+            animation: float 6s ease-in-out infinite;
+        }
+        .animate-float-delay { 
+            animation: float 6s ease-in-out infinite 2s;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .typing-effect {
+            border-right: 2px solid;
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            animation: typing 3s steps(30), blink-caret 0.5s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: red; }
+        }
+        .gradient-shift {
+            animation: gradient-shift 3s ease infinite;
+        }
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Mobile-specific adjustments */
+        @media (max-width: 640px) {
+            #details {
+                padding-top: 6rem;
+                padding-bottom: 6rem;
             }
-            
-            setInterval(changeText, 2000);
-        });
-    </script>
+            .typing-effect {
+                font-size: 1.25rem;
+                animation: typing 2.5s steps(30), blink-caret 0.5s step-end infinite;
+            }
+            .mobile-stack {
+                flex-direction: column;
+            }
+            .mobile-center {
+                text-align: center;
+            }
+            .mobile-padding {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            .mobile-margin {
+                margin-top: 2rem;
+            }
+        }
+    </style>
 </head>
 <body class="bg-black text-white">
     
 <!-- Navigation Bar -->
 <nav class="fixed w-full top-0 z-50 bg-gray-900/80 backdrop-blur-sm border-b border-gray-800">
-    <div class="container mx-auto px-6">
+    <div class="container mx-auto px-4 sm:px-6">
         <div class="flex items-center justify-between h-16">
             <!-- Logo/Brand -->
             <div class="flex-shrink-0">
@@ -47,7 +90,7 @@
             </div>
 
             <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center space-x-8">
+            <div class="hidden md:flex items-center space-x-4 lg:space-x-8">
                 <a href="#details" class="text-gray-300 hover:text-red-400 px-3 py-2 text-sm font-medium transition-all duration-300 group">
                     Home
                     <div class="h-0.5 mt-1 bg-gradient-to-r from-red-500 to-transparent w-0 group-hover:w-full transition-all duration-300"></div>
@@ -132,17 +175,17 @@
     });
 </script>
 
-<!-- Hero Section - Mobile Optimized -->
+<!-- Hero Section -->
 <section id="details" class="min-h-screen flex items-center justify-center bg-gradient-to-r from-black via-gray-900 to-black text-white px-4 sm:px-8 py-16 overflow-hidden">
-    <!-- Background Circles (Reduced for mobile) -->
+    <!-- Background Circles -->
     <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
-        <div class="absolute top-20 left-4 sm:left-20 w-32 sm:w-64 h-32 sm:h-64 rounded-full bg-red-500 opacity-10 blur-xl sm:blur-3xl animate-float"></div>
-        <div class="absolute bottom-10 right-4 sm:right-20 w-40 sm:w-80 h-40 sm:h-80 rounded-full bg-blue-500 opacity-10 blur-xl sm:blur-3xl animate-float-delay"></div>
+        <div class="absolute top-20 left-4 sm:left-20 w-24 sm:w-64 h-24 sm:h-64 rounded-full bg-red-500 opacity-10 blur-xl sm:blur-3xl animate-float"></div>
+        <div class="absolute bottom-10 right-4 sm:right-20 w-32 sm:w-80 h-32 sm:h-80 rounded-full bg-blue-500 opacity-10 blur-xl sm:blur-3xl animate-float-delay"></div>
     </div>
 
     <div class="container mx-auto flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12 relative z-10">
-        <!-- Text Content (Mobile-first) -->
-        <div class="w-full md:w-1/2 p-4 sm:p-6 md:p-8 rounded-xl relative group mt-8 md:mt-0">
+        <!-- Text Content -->
+        <div class="w-full md:w-1/2 p-4 sm:p-6 md:p-8 rounded-xl relative group mt-8 md:mt-0 mobile-center">
             <!-- Gradient Border -->
             <div class="absolute inset-0 rounded-xl p-[2px] bg-gradient-to-br from-red-500 via-purple-500 to-blue-500 opacity-70 group-hover:opacity-100 transition-opacity">
                 <div class="h-full w-full rounded-[10px] bg-gray-900/80 backdrop-blur-sm"></div>
@@ -161,12 +204,12 @@
                     </span>
                 </div>
                 
-                <p class="text-sm sm:text-base md:text-lg text-gray-300 mb-6 max-w-lg">
+                <p class="text-sm sm:text-base md:text-lg text-gray-300 mb-6 max-w-lg mx-auto md:mx-0">
                     I break systems to make them stronger. Specializing in ethical hacking, 
                     secure coding, and threat analysis.
                 </p>
                 
-                <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
                     <a href="#contact" class="px-4 py-2 sm:px-6 sm:py-3 bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 rounded-lg font-bold transition transform hover:scale-105 shadow-lg shadow-red-500/20 text-sm sm:text-base text-center">
                         Get In Touch
                     </a>
@@ -177,8 +220,8 @@
             </div>
         </div>
 
-        <!-- Avatar (Mobile-optimized) -->
-        <div class="w-full md:w-1/2 flex justify-center">
+        <!-- Avatar -->
+        <div class="w-full md:w-1/2 flex justify-center mobile-margin">
             <div class="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 group">
                 <img 
                     src="https://res.cloudinary.com/dhjktmlhs/image/upload/v1741699951/my_photo_z0gb4z.jpg" 
@@ -187,78 +230,16 @@
                           bg-gradient-to-r from-red-500 to-blue-500 bg-origin-border p-[3px]
                           shadow-lg sm:shadow-xl transform group-hover:scale-105 transition duration-500 animate-float"
                 >
-                <!-- Animated Ring (smaller on mobile) -->
+                <!-- Animated Ring -->
                 <div class="absolute inset-0 rounded-full bg-gradient-to-r from-red-500 to-blue-500 opacity-20 blur-lg sm:blur-xl -z-10 animate-pulse"></div>
             </div>
         </div>
     </div>
 </section>
 
-<style>
-    /* Animation styles - optimized for mobile */
-    .animate-float { 
-        animation: float 6s ease-in-out infinite;
-    }
-    .animate-float-delay { 
-        animation: float 6s ease-in-out infinite 2s;
-    }
-    @keyframes float {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
-    }
-    
-    /* Typing effect - adjusted for mobile */
-    .typing-effect {
-        border-right: 2px solid;
-        white-space: nowrap;
-        overflow: hidden;
-        display: inline-block;
-        animation: typing 3s steps(30), blink-caret 0.5s step-end infinite;
-    }
-    @keyframes typing {
-        from { width: 0 }
-        to { width: 100% }
-    }
-    @keyframes blink-caret {
-        from, to { border-color: transparent }
-        50% { border-color: red; }
-    }
-    
-    /* Gradient border animation - lighter on mobile */
-    .group:hover .bg-gradient-to-br {
-        animation: gradient-shift 3s ease infinite;
-    }
-    @keyframes gradient-shift {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-    }
-
-    /* Mobile-specific adjustments */
-    @media (max-width: 640px) {
-        #details {
-            padding-top: 6rem;
-            padding-bottom: 6rem;
-        }
-        .typing-effect {
-            font-size: 1.25rem; /* Slightly smaller on mobile */
-            animation: typing 2.5s steps(30), blink-caret 0.5s step-end infinite;
-        }
-    }
-</style>
-
-    <!-- Skills Section -->
-<section id="skills" class="relative py-24 bg-gradient-to-br from-gray-900 to-black overflow-hidden">
-    <!-- Animated background elements -->
-    <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
-        <div class="absolute top-1/4 left-10 w-32 h-32 rounded-full bg-red-500 opacity-10 blur-3xl animate-float"></div>
-        <div class="absolute bottom-1/3 right-20 w-40 h-40 rounded-full bg-blue-500 opacity-10 blur-3xl animate-float-delay"></div>
-    </div>
-
-    <div class="container mx-auto px-8 relative z-10">
 <!-- Skills Section -->
 <section id="skills" class="py-16 sm:py-24 bg-gradient-to-br from-gray-900 to-black overflow-hidden px-4 sm:px-8">
-    <!-- Reduced background elements for mobile -->
+    <!-- Background elements -->
     <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
         <div class="absolute top-1/4 left-4 w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-red-500 opacity-10 blur-lg sm:blur-3xl animate-float"></div>
         <div class="absolute bottom-1/3 right-4 w-28 h-28 sm:w-40 sm:h-40 rounded-full bg-blue-500 opacity-10 blur-lg sm:blur-3xl animate-float-delay"></div>
@@ -273,16 +254,16 @@
             <div class="w-20 h-1 bg-gradient-to-r from-red-500 to-blue-500 mx-auto"></div>
         </div>
 
-        <!-- Skills Grid (1 column on mobile) -->
+        <!-- Skills Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             <!-- Skill Item 1 -->
             <div class="relative group">
                 <div class="flex items-center gap-4 bg-gray-800/80 backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-gray-700 hover:border-red-500 transition-all">
-                    <div class="text-2xl sm:text-3xl text-red-400">🔷</div>
+                    <div class="text-2xl sm:text-3xl text-red-400"><i class="fab fa-html5"></i></div>
                     <div class="flex-grow">
                         <h3 class="text-lg sm:text-xl font-bold text-white mb-1">HTML/CSS</h3>
                         <div class="w-full bg-gray-700 rounded-full h-2">
-                            <div class="bg-gradient-to-r from-red-500 to-red-400 h-2 rounded-full" style="width: 70%"></div>
+                            <div class="bg-gradient-to-r from-red-500 to-red-400 h-2 rounded-full" style="width: 85%"></div>
                         </div>
                         <p class="text-xs sm:text-sm text-gray-400 mt-2">Building responsive web interfaces</p>
                     </div>
@@ -292,69 +273,173 @@
             <!-- Skill Item 2 -->
             <div class="relative group">
                 <div class="flex items-center gap-4 bg-gray-800/80 backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-all">
-                    <div class="text-2xl sm:text-3xl text-blue-400">💻</div>
+                    <div class="text-2xl sm:text-3xl text-blue-400"><i class="fab fa-python"></i></div>
                     <div class="flex-grow">
                         <h3 class="text-lg sm:text-xl font-bold text-white mb-1">Python</h3>
                         <div class="w-full bg-gray-700 rounded-full h-2">
-                            <div class="bg-gradient-to-r from-blue-500 to-blue-400 h-2 rounded-full" style="width: 80%"></div>
+                            <div class="bg-gradient-to-r from-blue-500 to-blue-400 h-2 rounded-full" style="width: 90%"></div>
                         </div>
                         <p class="text-xs sm:text-sm text-gray-400 mt-2">Security scripting & automation</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Add 4 more skill items with same structure -->
-            <!-- Pentesting Skill -->
+            <!-- Skill Item 3 -->
             <div class="relative group">
                 <div class="flex items-center gap-4 bg-gray-800/80 backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-gray-700 hover:border-purple-500 transition-all">
-                    <div class="text-2xl sm:text-3xl text-purple-400">🛡️</div>
+                    <div class="text-2xl sm:text-3xl text-purple-400"><i class="fas fa-shield-alt"></i></div>
                     <div class="flex-grow">
                         <h3 class="text-lg sm:text-xl font-bold text-white mb-1">Penetration Testing</h3>
                         <div class="w-full bg-gray-700 rounded-full h-2">
-                            <div class="bg-gradient-to-r from-purple-500 to-purple-400 h-2 rounded-full" style="width: 85%"></div>
+                            <div class="bg-gradient-to-r from-purple-500 to-purple-400 h-2 rounded-full" style="width: 80%"></div>
                         </div>
                         <p class="text-xs sm:text-sm text-gray-400 mt-2">Ethical hacking techniques</p>
                     </div>
                 </div>
             </div>
-            
-            <!-- Add more skills as needed -->
+
+            <!-- Skill Item 4 -->
+            <div class="relative group">
+                <div class="flex items-center gap-4 bg-gray-800/80 backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-gray-700 hover:border-green-500 transition-all">
+                    <div class="text-2xl sm:text-3xl text-green-400"><i class="fas fa-network-wired"></i></div>
+                    <div class="flex-grow">
+                        <h3 class="text-lg sm:text-xl font-bold text-white mb-1">Network Security</h3>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-gradient-to-r from-green-500 to-green-400 h-2 rounded-full" style="width: 75%"></div>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-400 mt-2">Securing network infrastructure</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill Item 5 -->
+            <div class="relative group">
+                <div class="flex items-center gap-4 bg-gray-800/80 backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-gray-700 hover:border-yellow-500 transition-all">
+                    <div class="text-2xl sm:text-3xl text-yellow-400"><i class="fas fa-lock"></i></div>
+                    <div class="flex-grow">
+                        <h3 class="text-lg sm:text-xl font-bold text-white mb-1">Cryptography</h3>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-gradient-to-r from-yellow-500 to-yellow-400 h-2 rounded-full" style="width: 70%"></div>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-400 mt-2">Encryption & decryption methods</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill Item 6 -->
+            <div class="relative group">
+                <div class="flex items-center gap-4 bg-gray-800/80 backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-gray-700 hover:border-pink-500 transition-all">
+                    <div class="text-2xl sm:text-3xl text-pink-400"><i class="fab fa-linux"></i></div>
+                    <div class="flex-grow">
+                        <h3 class="text-lg sm:text-xl font-bold text-white mb-1">Linux Security</h3>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-gradient-to-r from-pink-500 to-pink-400 h-2 rounded-full" style="width: 85%"></div>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-400 mt-2">Hardening Linux systems</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- Animation Styles -->
-<style>
-    .animate-float { animation: float 6s ease-in-out infinite; }
-    .animate-float-delay { animation: float 6s ease-in-out infinite 2s; }
-    @keyframes float {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
-    }
-    
-    /* Text animation for hero section */
-    #animated-text {
-        display: inline-block;
-        animation: fadeIn 1s ease-in-out;
-    }
-    @keyframes fadeIn {
-        0% { opacity: 0; transform: translateY(10px); }
-        100% { opacity: 1; transform: translateY(0); }
-    }
-</style>
+<!-- Projects Section -->
+<section id="projects" class="py-16 sm:py-24 bg-gradient-to-br from-black to-gray-900 overflow-hidden px-4 sm:px-8">
+    <div class="container mx-auto relative">
+        <!-- Section Header -->
+        <div class="text-center mb-12 sm:mb-16">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-200">My Projects</span>
+            </h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-red-500 to-blue-500 mx-auto"></div>
+            <p class="mt-6 text-gray-400 max-w-2xl mx-auto">Some of my recent security and development projects</p>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Project 1 -->
+            <div class="relative group overflow-hidden rounded-xl border border-gray-800 hover:border-red-500 transition-all duration-500 h-full">
+                <div class="absolute inset-0 bg-gradient-to-br from-red-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="h-full bg-gray-900/80 backdrop-blur-sm p-6 flex flex-col">
+                    <div class="text-red-400 text-4xl mb-4"><i class="fas fa-shield-virus"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-2">Vulnerability Scanner</h3>
+                    <p class="text-gray-400 text-sm mb-4">A Python-based tool that automatically scans networks for vulnerabilities and generates detailed reports.</p>
+                    <div class="mt-auto">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-800 text-red-400 text-xs rounded">Python</span>
+                            <span class="px-2 py-1 bg-gray-800 text-blue-400 text-xs rounded">Security</span>
+                            <span class="px-2 py-1 bg-gray-800 text-purple-400 text-xs rounded">Automation</span>
+                        </div>
+                        <a href="#" class="text-sm font-medium text-red-400 hover:text-red-300 inline-flex items-center">
+                            View Project <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="relative group overflow-hidden rounded-xl border border-gray-800 hover:border-blue-500 transition-all duration-500 h-full">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="h-full bg-gray-900/80 backdrop-blur-sm p-6 flex flex-col">
+                    <div class="text-blue-400 text-4xl mb-4"><i class="fas fa-key"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-2">Password Manager</h3>
+                    <p class="text-gray-400 text-sm mb-4">A secure encrypted password manager with two-factor authentication and breach monitoring.</p>
+                    <div class="mt-auto">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-800 text-blue-400 text-xs rounded">JavaScript</span>
+                            <span class="px-2 py-1 bg-gray-800 text-purple-400 text-xs rounded">Encryption</span>
+                            <span class="px-2 py-1 bg-gray-800 text-green-400 text-xs rounded">Security</span>
+                        </div>
+                        <a href="#" class="text-sm font-medium text-blue-400 hover:text-blue-300 inline-flex items-center">
+                            View Project <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="relative group overflow-hidden rounded-xl border border-gray-800 hover:border-purple-500 transition-all duration-500 h-full">
+                <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="h-full bg-gray-900/80 backdrop-blur-sm p-6 flex flex-col">
+                    <div class="text-purple-400 text-4xl mb-4"><i class="fas fa-network-wired"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-2">Network Monitor</h3>
+                    <p class="text-gray-400 text-sm mb-4">Real-time network traffic analyzer that detects anomalies and potential security threats.</p>
+                    <div class="mt-auto">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-800 text-purple-400 text-xs rounded">Python</span>
+                            <span class="px-2 py-1 bg-gray-800 text-pink-400 text-xs rounded">Networking</span>
+                            <span class="px-2 py-1 bg-gray-800 text-blue-400 text-xs rounded">Security</span>
+                        </div>
+                        <a href="#" class="text-sm font-medium text-purple-400 hover:text-purple-300 inline-flex items-center">
+                            View Project <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- View More Button -->
+        <div class="text-center mt-12">
+            <a href="#" class="inline-flex items-center px-6 py-3 border border-gray-700 hover:border-red-500 text-white font-medium rounded-lg hover:bg-gray-800/50 transition-all">
+                View All Projects
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
 
 <!-- Education Section -->
-<section id="education" class="relative py-24 bg-gradient-to-br from-gray-900 to-black overflow-hidden">
-    <!-- Animated background elements -->
+<section id="education" class="relative py-16 sm:py-24 bg-gradient-to-br from-gray-900 to-black overflow-hidden px-4 sm:px-8">
+    <!-- Background elements -->
     <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
-        <div class="absolute top-1/3 right-20 w-32 h-32 rounded-full bg-red-500 opacity-10 blur-3xl animate-float"></div>
-        <div class="absolute bottom-1/4 left-20 w-40 h-40 rounded-full bg-blue-500 opacity-10 blur-3xl animate-float-delay"></div>
+        <div class="absolute top-1/3 right-4 sm:right-20 w-24 sm:w-32 h-24 sm:h-32 rounded-full bg-red-500 opacity-10 blur-lg sm:blur-3xl animate-float"></div>
+        <div class="absolute bottom-1/4 left-4 sm:left-20 w-28 sm:w-40 h-28 sm:h-40 rounded-full bg-blue-500 opacity-10 blur-lg sm:blur-3xl animate-float-delay"></div>
     </div>
 
-    <div class="container mx-auto px-8 relative z-10">
+    <div class="container mx-auto px-4 relative z-10">
         <!-- Section Header -->
-        <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-bold mb-4">
+        <div class="text-center mb-12 sm:mb-16">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-200">Education</span>
             </h2>
             <div class="w-24 h-1 bg-gradient-to-r from-red-500 to-blue-500 mx-auto"></div>
@@ -364,52 +449,52 @@
         <!-- Timeline -->
         <div class="relative max-w-4xl mx-auto">
             <!-- Timeline line -->
-            <div class="absolute left-1/2 w-1 h-full bg-gradient-to-b from-red-500 to-blue-500 transform -translate-x-1/2"></div>
+            <div class="absolute left-1/2 w-0.5 sm:w-1 h-full bg-gradient-to-b from-red-500 to-blue-500 transform -translate-x-1/2"></div>
 
             <!-- Education Item 1 - School -->
-            <div class="mb-16 w-full flex flex-col md:flex-row items-center justify-between group">
+            <div class="mb-8 sm:mb-16 w-full flex flex-col md:flex-row items-center justify-between group">
                 <div class="hidden md:block md:w-5/12"></div> <!-- Spacer -->
                 <div class="w-full md:w-5/12 pl-8 md:pl-0 pr-8 md:pr-8 order-1 md:order-2">
-                    <div class="relative rounded-xl bg-gradient-to-br from-red-500/20 to-blue-500/20 p-[2px] group-hover:opacity-100 transition-opacity">
-                        <div class="bg-gray-900/80 backdrop-blur-sm rounded-xl p-6 border border-gray-800">
-                            <div class="flex items-center gap-4 mb-3">
-                                <div class="text-red-400 text-3xl">🏫</div>
-                                <h3 class="text-xl font-bold text-white">J.M.J English Medium School</h3>
+                    <div class="relative rounded-xl bg-gradient-to-br from-red-500/20 to-blue-500/20 p-[1px] sm:p-[2px] group-hover:opacity-100 transition-opacity">
+                        <div class="bg-gray-900/80 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-gray-800">
+                            <div class="flex items-center gap-3 sm:gap-4 mb-3">
+                                <div class="text-red-400 text-2xl sm:text-3xl">🏫</div>
+                                <h3 class="text-lg sm:text-xl font-bold text-white">J.M.J English Medium School</h3>
                             </div>
-                            <p class="text-gray-400 text-sm mb-2">High School Qualification (10th Grade)</p>
+                            <p class="text-gray-400 text-xs sm:text-sm mb-2">High School Qualification (10th Grade)</p>
                             <p class="text-gray-500 text-xs">2016 - 2017</p>
-                            <div class="mt-4 flex flex-wrap gap-2">
+                            <div class="mt-3 sm:mt-4 flex flex-wrap gap-1 sm:gap-2">
                                 <span class="px-2 py-1 bg-gray-800 text-red-400 text-xs rounded">GPA: 9.2/10</span>
                                 <span class="px-2 py-1 bg-gray-800 text-blue-400 text-xs rounded">State Board</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="w-24 h-24 rounded-full bg-gray-900 border-4 border-red-500 flex items-center justify-center order-2 md:order-1 transform group-hover:scale-110 transition-transform">
-                    <span class="text-4xl">🎒</span>
+                <div class="w-16 h-16 sm:w-24 sm:h-24 rounded-full bg-gray-900 border-2 sm:border-4 border-red-500 flex items-center justify-center order-2 md:order-1 transform group-hover:scale-110 transition-transform mt-4 sm:mt-0">
+                    <span class="text-2xl sm:text-4xl">🎒</span>
                 </div>
             </div>
 
             <!-- Education Item 2 - Diploma -->
-            <div class="mb-16 w-full flex flex-col md:flex-row items-center justify-between group">
+            <div class="mb-8 sm:mb-16 w-full flex flex-col md:flex-row items-center justify-between group">
                 <div class="w-full md:w-5/12 pl-8 pr-8 md:pr-0 order-1">
-                    <div class="relative rounded-xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 p-[2px] group-hover:opacity-100 transition-opacity">
-                        <div class="bg-gray-900/80 backdrop-blur-sm rounded-xl p-6 border border-gray-800">
-                            <div class="flex items-center gap-4 mb-3">
-                                <div class="text-blue-400 text-3xl">🎓</div>
-                                <h3 class="text-xl font-bold text-white">Thandra Paparaya Polytechnic College</h3>
+                    <div class="relative rounded-xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 p-[1px] sm:p-[2px] group-hover:opacity-100 transition-opacity">
+                        <div class="bg-gray-900/80 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-gray-800">
+                            <div class="flex items-center gap-3 sm:gap-4 mb-3">
+                                <div class="text-blue-400 text-2xl sm:text-3xl">🎓</div>
+                                <h3 class="text-lg sm:text-xl font-bold text-white">Thandra Paparaya Polytechnic College</h3>
                             </div>
-                            <p class="text-gray-400 text-sm mb-2">Diploma in Electronic and Communication Engineering</p>
+                            <p class="text-gray-400 text-xs sm:text-sm mb-2">Diploma in Electronic and Communication Engineering</p>
                             <p class="text-gray-500 text-xs">2017 - 2020 | GPA: 8.5/10</p>
-                            <div class="mt-4 flex flex-wrap gap-2">
+                            <div class="mt-3 sm:mt-4 flex flex-wrap gap-1 sm:gap-2">
                                 <span class="px-2 py-1 bg-gray-800 text-blue-400 text-xs rounded">Microprocessors</span>
                                 <span class="px-2 py-1 bg-gray-800 text-purple-400 text-xs rounded">Digital Electronics</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="w-24 h-24 rounded-full bg-gray-900 border-4 border-blue-500 flex items-center justify-center order-2 transform group-hover:scale-110 transition-transform">
-                    <span class="text-4xl">📚</span>
+                <div class="w-16 h-16 sm:w-24 sm:h-24 rounded-full bg-gray-900 border-2 sm:border-4 border-blue-500 flex items-center justify-center order-2 transform group-hover:scale-110 transition-transform mt-4 sm:mt-0">
+                    <span class="text-2xl sm:text-4xl">📚</span>
                 </div>
             </div>
 
@@ -417,15 +502,15 @@
             <div class="w-full flex flex-col md:flex-row items-center justify-between group">
                 <div class="hidden md:block md:w-5/12"></div> <!-- Spacer -->
                 <div class="w-full md:w-5/12 pl-8 md:pl-0 pr-8 md:pr-8 order-1 md:order-2">
-                    <div class="relative rounded-xl bg-gradient-to-br from-purple-500/20 to-red-500/20 p-[2px] group-hover:opacity-100 transition-opacity">
-                        <div class="bg-gray-900/80 backdrop-blur-sm rounded-xl p-6 border border-gray-800">
-                            <div class="flex items-center gap-4 mb-3">
-                                <div class="text-purple-400 text-3xl">🛡️</div>
-                                <h3 class="text-xl font-bold text-white">Visakha Institute of Engineering & Technology</h3>
+                    <div class="relative rounded-xl bg-gradient-to-br from-purple-500/20 to-red-500/20 p-[1px] sm:p-[2px] group-hover:opacity-100 transition-opacity">
+                        <div class="bg-gray-900/80 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-gray-800">
+                            <div class="flex items-center gap-3 sm:gap-4 mb-3">
+                                <div class="text-purple-400 text-2xl sm:text-3xl">🛡️</div>
+                                <h3 class="text-lg sm:text-xl font-bold text-white">Visakha Institute of Engineering & Technology</h3>
                             </div>
-                            <p class="text-gray-400 text-sm mb-2">B.Tech in Cybersecurity Engineering (2nd Year)</p>
+                            <p class="text-gray-400 text-xs sm:text-sm mb-2">B.Tech in Cybersecurity Engineering (2nd Year)</p>
                             <p class="text-gray-500 text-xs">2022 - Present</p>
-                            <div class="mt-4 flex flex-wrap gap-2">
+                            <div class="mt-3 sm:mt-4 flex flex-wrap gap-1 sm:gap-2">
                                 <span class="px-2 py-1 bg-gray-800 text-purple-400 text-xs rounded">Network Security</span>
                                 <span class="px-2 py-1 bg-gray-800 text-red-400 text-xs rounded">Ethical Hacking</span>
                                 <span class="px-2 py-1 bg-gray-800 text-blue-400 text-xs rounded">Cryptography</span>
@@ -433,22 +518,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-24 h-24 rounded-full bg-gray-900 border-4 border-purple-500 flex items-center justify-center order-2 md:order-1 transform group-hover:scale-110 transition-transform">
-                    <span class="text-4xl">💻</span>
+                <div class="w-16 h-16 sm:w-24 sm:h-24 rounded-full bg-gray-900 border-2 sm:border-4 border-purple-500 flex items-center justify-center order-2 md:order-1 transform group-hover:scale-110 transition-transform mt-4 sm:mt-0">
+                    <span class="text-2xl sm:text-4xl">💻</span>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-<style>
-    .animate-float { animation: float 6s ease-in-out infinite; }
-    .animate-float-delay { animation: float 6s ease-in-out infinite 2s; }
-    @keyframes float {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-20px); }
-    }
-</style>
 
 <!-- Contact Section -->
 <section id="contact" class="relative py-24 bg-gradient-to-br from-black to-gray-900 min-h-screen overflow-hidden">
